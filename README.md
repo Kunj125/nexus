@@ -1,2 +1,2 @@
 # nexus
-A real-time video chat application using webrtc
+A real-time video chat application using webrtc.
