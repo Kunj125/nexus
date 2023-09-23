@@ -1,4 +1,5 @@
-export default function Lobby() {
+
+export default function Lobby({children}) {
     return <>
         <div>
             <img alt=" " src=" ">
@@ -7,8 +8,9 @@ export default function Lobby() {
             <input type="text">
             </input>
             <button>
-                Start/Join a meeting
+                Join
             </button>
+            {children}
         </div>
     </>
 }

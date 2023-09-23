@@ -3,6 +3,14 @@
 body {
     background-color: #1E1D1E;
 }
+
+.main{
+    display : flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
 .logo-container {
     display: flex;
     flex-direction: column;
