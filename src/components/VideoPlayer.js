@@ -1,6 +1,6 @@
 import { SocketContext } from "../SocketContext";
 import '../App.css';
-import { useContext } from "react";
+import { useContext} from "react";
 export default function VideoPlayer() {
     const { name, callAccepted, myVideo, userVideo, stream, call, callEnded } = useContext(SocketContext);
     return (
