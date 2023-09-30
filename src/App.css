@@ -55,12 +55,82 @@ body {
     color: #777777ca;
     font-family: "Montserrat";
     font-weight: 600;
-    font-size: 12px;
+    font-size: 15px;
     margin: 5px;
     margin-left: 0;
 }
 
 .video{
     width: 550px;
-    height: 360px;
+}
+.options-container{
+    width: 600px;
+    margin: 35px 0;
+    padding: 0;
+}
+.options{
+    padding: 10px 20px;
+    border: 2px solid rgba(128, 128, 128, 0.471);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.options-grid-container{
+    width: 100%;
+    display: flex;
+}
+.options-grid-padding{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+    margin: 0;
+}
+
+.options-grid-padding h6{
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    margin: 10px 0;
+}
+.options-grid-padding input{
+    border: 0;
+    outline: 0;
+    height: 1em;
+    font-family: "Montserrat";
+    letter-spacing: 1px;
+    padding: 5px;
+}
+.options-grid-padding button{
+    background-color: black;
+    outline: 0;
+    border: 0;
+    height: 2em;
+    font-family: "Montserrat";
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+@media (max-width: 576px) {
+    .options-grid-container{
+        flex-direction: column;
+    }
+    .options-container{
+        width: 80%;
+    }
+    .options-grid-padding{
+        width: 100%;
+    }
+    .video{
+        width: 100%;
+    }
+    .video-container{
+        margin: 30px;
+    }
+    .video-grid{
+        flex-direction: column; 
+   }
 }
