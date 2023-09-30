@@ -17,13 +17,21 @@ const ContextProvider = ({ children }) => {
     const userVideo = useRef();
     const connectionRef = useRef();
     useEffect(() => {
-        navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then((currentStream) => {
-            setStream(currentStream);
-            myVideo.current.srcObject = currentStream;
-        })
+        if (myVideo.current) {
+            myVideo.current.srcObject = stream;
+        }
+    }, [myVideo, stream]);
+
+    useEffect(() => {
+        navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+            .then((currentStream) => {
+                setStream(currentStream);
+            });
+
         socket.on('me', (id) => setMe(id));
-        socket.on('calluser', ({ from, name: callername, signal }) => {
-            setCall({ isReceivedCall: true, from, name: callername, signal })
+
+        socket.on('callUser', ({ from, name: callerName, signal }) => {
+            setCall({ isReceivingCall: true, from, name: callerName, signal });
         });
     }, []);
     const answerCall = () => {

@@ -37,3 +37,30 @@ body {
     /* position: absolute; */
     object-fit: contain;
 }
+
+.video-grid{
+    display: flex;
+    justify-content: center;
+}
+.video-container{
+    padding: 10px;
+    border: 2px solid #9a26ff4d;
+    margin: 10px;
+}
+.video-container:nth-of-type(2){
+    border:  2px solid #e33fc558;
+}
+
+.video-container h5{
+    color: #777777ca;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 12px;
+    margin: 5px;
+    margin-left: 0;
+}
+
+.video{
+    width: 550px;
+    height: 360px;
+}
